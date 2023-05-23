@@ -2,7 +2,7 @@ import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { createRoot } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 const theme = createTheme();
 

@@ -58,7 +58,7 @@ export const SearchInputWrapper = () => {
       {searchValue && searchResults?.length > 0 && (
         <AutocompleteList>
           {searchResults.map((result) => (
-            <ListItem key={result.title}  onClick={() => handleOpenPost(result.id)} button>
+            <ListItem key={result.id}  onClick={() => handleOpenPost(result.id)} button>
               <ListItemText primary={result.title} />
             </ListItem>
           ))}

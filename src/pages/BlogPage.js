@@ -61,7 +61,7 @@ const PostList = () => {
             </Button>
             <List>
               {allPosts?.map((post, index) => (
-                <ListItem key={index} button>
+                <ListItem key={post.id} button>
                   <ListItemText
                     primary={post.title}
                     secondary={
