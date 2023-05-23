@@ -12,8 +12,10 @@ const getPostById = (key, id) => {
 
 const addNewPost = (key, newPost) => {
   const posts = loadPosts(key);
-  const updatedPosts = [...posts, { id: uuidv4(), ...newPost }];
+  const id = uuidv4();
+  const updatedPosts = [...posts, { id, ...newPost }];
   localStorage.setItem(key, JSON.stringify(updatedPosts));
+  return id;
 };
 
 const editPost = (key, updatedPost) => {

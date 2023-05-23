@@ -37,7 +37,8 @@ const PostList = () => {
   };
 
   const handleAddPost = (newPost) => {
-    addNewPost('blogPosts', newPost);
+    const newId = addNewPost('blogPosts', newPost);
+    newPost.id = newId;
     setAllPosts((prevPosts) => [...prevPosts, newPost]);
   };
 
